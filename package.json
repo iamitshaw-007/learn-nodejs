@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodeJs learning",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodeJs",
+    "javsScript"
+  ],
+  "author": "Amit Shaw",
+  "license": "ISC"
+}
