@@ -1,4 +1,5 @@
 import fsPromises, { constants } from "fs/promises";
+import fs from "fs";
 import path from "path";
 
 const fileOperation = async function (fileName) {
@@ -58,6 +59,35 @@ const fileOperation = async function (fileName) {
             .catch((error) => {
                 throw new Error("fileDeleteOperationException");
             });
+
+        if (
+            !fs.existsSync(
+                path.join(path.dirname(import.meta.filename), "dirName")
+            )
+        ) {
+            /* if directory doesn't exists */
+            await fsPromises
+                .mkdir(
+                    path.join(path.dirname(import.meta.filename), "dirName"),
+                    {
+                        recursive: true,
+                    }
+                )
+                .then((data) => console.log("Directory Created"))
+                .catch((error) => {
+                    throw new Error("folderDirectoryCreatedException");
+                });
+        } else {
+            /* if directory exists */
+            await fsPromises
+                .rm(path.join(path.dirname(import.meta.filename), "dirName"), {
+                    recursive: true,
+                })
+                .then((data) => console.log("Directory Removed"))
+                .catch((error) => {
+                    throw new Error("folderDirectoryRemovedException");
+                });
+        }
     } catch (error) {
         console.error(error);
     }
