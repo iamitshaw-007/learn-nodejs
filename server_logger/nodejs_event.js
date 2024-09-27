@@ -1,5 +1,6 @@
 import { EventEmitter } from "events";
 import { logEvents } from "./logger.js";
+
 const eventEmmiter = new EventEmitter();
 
 eventEmmiter.addListener("log", logEvents);

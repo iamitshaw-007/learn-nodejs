@@ -5,7 +5,7 @@ import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
 
-async function logEvents(message) {
+async function logEvents(message, logFileName = "logger.txt") {
     const formattedDate = format(Date.now(), "yyyy-MM-dd hh::mm::ss aaa");
     // console.log(formattedDate);
 
@@ -33,11 +33,10 @@ async function logEvents(message) {
                 path.join(
                     path.dirname(import.meta.filename),
                     "logs",
-                    "logger.txt"
+                    logFileName
                 ),
                 `${formattedDate} - ${random_uuid}:: ${message}\n`
             )
-            .then((value) => console.log("Event Logged"))
             .catch((error) => {
                 throw new Error("fileAppendOperationException");
             });

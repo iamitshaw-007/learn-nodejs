@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./server_logger/nodejs_event.js"
+    "start": "nodemon ./nodejs_server/server.js"
   },
   "keywords": [
     "nodeJs",
