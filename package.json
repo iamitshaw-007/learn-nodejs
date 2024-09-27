@@ -5,12 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./server_logger/nodejs_event.js"
   },
   "keywords": [
     "nodeJs",
     "javsScript"
   ],
   "author": "Amit Shaw",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^10.0.0"
+  }
 }
