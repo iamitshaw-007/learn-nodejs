@@ -1,0 +1,38 @@
+[
+    {
+        "firstName": "Amit",
+        "lastName": "Shaw",   
+        "phone": "8789906286",
+        "email": "iamitshaw.101@gmail.com",
+        "job": "Software Engineer",
+        "gender": "male",
+        "countryCode": "+91 - "
+    },
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "phone": "5551234567",
+        "email": "johndoe@example.com",
+        "job": "Web Developer",
+        "gender": "male",
+        "countryCode": "+1 - "
+    },
+    {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phone": "2079460958",
+        "email": "janesmith@example.com",
+        "job": "Product Manager",
+        "gender": "female",
+        "countryCode": "+44 - "
+    },
+    {
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "phone": "293744000",
+        "email": "alicejohnson@example.com",
+        "job": "UX Designer",
+        "gender": "female",
+        "countryCode": "+61 - "
+    }
+]

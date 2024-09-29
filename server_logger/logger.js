@@ -44,5 +44,5 @@ async function logEvents(message, logFileName = "logger.txt") {
         console.error(error);
     }
 }
-// logEvents("Life is everything");
+
 export { logEvents };

@@ -96,6 +96,7 @@ const server = http.createServer((request, response) => {
     if (fs.existsSync(filePath)) {
         serveFile(filePath, contentType, response);
     } else {
+        /* serve redirected files or 404: not found file */
         switch (path.parse(filePath).base) {
             case "old-index.html":
                 response.writeHead(301, { Location: "/new-index.html" });
